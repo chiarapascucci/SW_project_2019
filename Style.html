@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+
+    <script>
+
+
+function heightfunction() {
+  document.getElementById("heightoutt").style.visibility = "visible";
+  document.getElementById("oppname").style.visibility = "visible";
+  document.getElementById("oppheight").style.visibility = "visible";
+  document.getElementById("oppweight").style.visibility = "visible";
+  document.getElementById("oppfilms").style.visibility = "visible";
+}
+
+function weightfunction() {
+  document.getElementById("weightoutt").style.visibility = "visible";
+  document.getElementById("oppname").style.visibility = "visible";
+  document.getElementById("oppheight").style.visibility = "visible";
+  document.getElementById("oppweight").style.visibility = "visible";
+  document.getElementById("oppfilms").style.visibility = "visible";
+}
+
+function filmfunction() {
+  document.getElementById("filmsoutt").style.visibility = "visible";
+  document.getElementById("oppname").style.visibility = "visible";
+  document.getElementById("oppheight").style.visibility = "visible";
+  document.getElementById("oppweight").style.visibility = "visible";
+  document.getElementById("oppfilms").style.visibility = "visible";
+}
+
+
+
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+
+
+    <style>
+        body {
+        font-family: 'Cantarell', sans-serif;
+        overflow-x: hidden;
+        background-color: black;
+        color: yellow;
+        font-size: 16px;
+        }
+
+        body, html {height: 100%}
+
+        .logo {
+        width: 80%;
+        height: auto;
+        }
+
+        .btn {
+        color: black;
+        }
+
+        .opponent {
+        visibility: hidden;
+        }
+
+        .outcome {
+        visibility: hidden;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<br>
+<div class="container">
+<div class="row">
+
+    <div class="col-md-5">
+    <img src="../static/Star Wars.png" class="logo">
+        </div>
+
+    <div class="col-md-6">
+        <p></p>
+        <br>
+
+        <p>How to Play:</p>
+        <p>Take a look at the Star Wars character that has been randomly generated for you and choose which metric to battle your oppenent with!</p>
+        <p>Another Star Wars character will be generated and your metrics compared. If you have the same or larger of the numbers you win!</p>
+
+    </div>
+
+
+
+
+
+</div>
+
+</div>
+<div class="container">
+
+
+
+</div>
+
+
+
+
+<div class="container">
+<br>
+    <br>
+    <div class="row">
+        <div class="col-md-5 large">
+    <p>Your character is {{name1}}.</p>
+            <br>
+    </div>
+
+
+
+        <div id="oppname" class="col-md-3 large opponent">
+            <p>Your opponent was {{name2}}.</p>
+            <br>
+     </div>
+  </div>
+
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <br>
+    <p>Their height is {{height1}}.</p>
+            <br>
+        </div>
+
+        <div class="col-md-2">
+            <br>
+    <button type="button" onclick="heightfunction()" class="heightbtn btn btn-light btn-sm">Height</button>
+    </div>
+
+        <div id= "oppheight" class="col-md-4 opponent">
+            <br>
+            <p>Their height is {{height2}}.</p>
+            <br>
+     </div>
+
+        <div id="heightoutt" class="col-md-3 outcome heightout">
+             <br>
+        <p>{{heightout}}</p>
+        <br>
+    </div>
+    </div>
+
+
+
+
+
+     <div class="row">
+        <div class="col-md-3">
+            <br>
+    <p>Their weight is {{weight1}}.</p>
+            <br>
+        </div>
+
+        <div class="col-md-2">
+            <br>
+    <button type="button" onclick="weightfunction()"class="weightbtn btn btn-light btn-sm">Weight</button>
+    </div>
+
+         <div id="oppweight" class="col-md-4 opponent">
+             <br>
+            <p>Their weight is {{weight2}}.</p>
+             <br>
+     </div>
+
+         <div id="weightoutt" class="col-md-3 outcome weightout">
+             <br>
+        <p>{{weightout}}</p>
+        <br>
+    </div>
+
+  </div>
+
+
+
+ <div class="row">
+        <div class="col-md-3">
+            <br>
+    <p>They have been in {{films1}} film(s).</p>
+            <br>
+        </div>
+
+        <div class="col-md-2">
+            <br>
+    <button type="button" onclick="filmfunction()"class="filmbtn btn btn-light btn-sm">Films</button>
+    </div>
+
+     <div id="oppfilms" class="col-md-4 opponent">
+         <br>
+            <p>They have been in {{films2}} film(s).</p>
+         <br>
+     </div>
+
+     <div id="filmsoutt" class="col-md-3 outcome filmout">
+             <br>
+        <p>{{filmout}}</p>
+        <br>
+    </div>
+  </div>
+
+
+
+
+<br>
+    <div class="large">
+    <p>Choose your battle metric!</p>
+</div>
+
+    </div>
+
+
+
+
+</body>
+</html>

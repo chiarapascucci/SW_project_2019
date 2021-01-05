@@ -1,0 +1,11 @@
+body {
+  font-family: 'Cantarell', sans-serif;
+  overflow-x: hidden;
+  background-color: black;
+  color: yellow;
+}
+
+body, html {height: 100%}
+
+
+
